@@ -5,7 +5,9 @@ I clean and deleted the packages folder before I upload the project, to reduce t
 
 
 CREATE TABLE [Students]
+
 (
+
 [Id] INT IDENTITY NOT NULL,
 
 [FirstName] NVARCHAR(100) NOT NULL,
@@ -13,9 +15,13 @@ CREATE TABLE [Students]
 [LastName] NVARCHAR(100) NOT NULL,
 
 CONSTRAINT [PK_Students] PRIMARY KEY ([Id])
+
 )
+
 CREATE TABLE [Emails]
+
 (
+
 [Id] INT IDENTITY NOT NULL,
 
 [Email] NVARCHAR(100) NOT NULL,
@@ -25,4 +31,6 @@ CREATE TABLE [Emails]
 CONSTRAINT [PK_Emails] PRIMARY KEY ([Id]),
 
 CONSTRAINT [FK_Students_Emails] FOREIGN KEY ([StudentId]) REFERENCES [Students] ([Id]),
+
 )
+
