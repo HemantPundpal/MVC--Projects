@@ -1,7 +1,7 @@
 # MVC--Projects
 Introduction to MVC
 
-I clean and deleted the packages folder before I upload the project, to reduce the numbe of files. So, make sure REBUILD ALL is issued a few time before running the programs.
+The Solution is clean (no executables) and the packages folder is deleted before project is uploaded, this is to reduce the number of files. So, make sure REBUILD ALL is issued a few time before running the programs to regenerate the package folder according to dependencies and create the executables.
 - Following Database tables are used through out the example projects in Introduction to ADO.NET
 
 
