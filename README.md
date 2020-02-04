@@ -2,6 +2,8 @@
 Introduction to MVC
 I clean and deleted the packages folder before I upload the project, to reduce the numbe of files. So, make sure REBUILD ALL is issued a few time before running the programs.
 - Following Database tables are used through out the example projects in Introduction to ADO.NET
+
+
 CREATE TABLE [Students]
 (
 [Id] INT IDENTITY NOT NULL,
