@@ -1,0 +1,66 @@
+﻿@model ModelsinMVC.Models.StudentDetails
+
+@{
+    ViewBag.Title = "Student Details";
+}
+
+<h2>Student Details</h2>
+
+<table style="font-family:Arial" border="1" align="center">
+    @{
+        string getStudentEmails()
+        {
+            string studentEmails = string.Empty;
+            int Count = 0;
+            foreach (string studentEmail in Model.StudentEmailList)
+            {
+                Count++;
+                if (Count > 1)
+                {
+                    studentEmails += $", {studentEmail}";
+                }
+                else
+                {
+                    studentEmails = studentEmail;
+                }
+
+            }
+            return studentEmails;
+        }
+    }
+
+    <tr>
+        <td>
+            <b>Student Id :</b>
+        </td>
+        <td>
+            @Model.Id
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>First Name </b>
+        </td>
+        <td>
+            @Model.FirstName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Last Name </b>
+        </td>
+        <td>
+            @Model.LastName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Emails </b>
+        </td>
+        <td>
+            @getStudentEmails()
+        </td>
+    </tr>
+</table>
+
+@Html.ActionLink("Back to Student Index", "Index")
